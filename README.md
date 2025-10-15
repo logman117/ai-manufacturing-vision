@@ -1,4 +1,4 @@
-# Manufacturing Part Analyzer
+# AI Manufacturing Part Analyzer
 
 An AI-powered system that analyzes technical drawings (PDFs) to automatically predict manufacturing characteristics and processes using Azure OpenAI's GPT-4 Vision model.
 
