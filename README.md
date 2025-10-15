@@ -1,6 +1,6 @@
 # AI Manufacturing Part Analyzer
 
-An AI-powered system that analyzes technical drawings (PDFs) to automatically predict manufacturing characteristics and processes using Azure OpenAI's GPT-4 Vision model.
+An AI-powered system that analyzes technical drawings (PDFs) to automatically predict manufacturing characteristics and processes using Azure OpenAI's GPT-5 model with advanced vision capabilities.
 
 ## Features
 
@@ -8,7 +8,7 @@ An AI-powered system that analyzes technical drawings (PDFs) to automatically pr
 - **Manufacturing Process Prediction**: Identifies 16+ manufacturing processes required for each part
 - **Batch Processing**: Analyze multiple drawings at once
 - **Structured Output**: Returns JSON with all manufacturing characteristics
-- **High Accuracy**: Uses GPT-4 Vision for superior drawing interpretation
+- **High Accuracy**: Uses GPT-5 for superior drawing interpretation
 
 ## Manufacturing Characteristics Detected
 
@@ -42,7 +42,7 @@ An AI-powered system that analyzes technical drawings (PDFs) to automatically pr
 ### 1. Azure OpenAI Service
 You need an Azure subscription with:
 - Azure OpenAI Service deployed
-- GPT-4 Vision model deployed
+- GPT-5 model deployed
 - API key and endpoint
 
 ### 2. Python Environment
@@ -84,7 +84,7 @@ Edit `.env` with your Azure OpenAI details:
 ```env
 AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
 AZURE_OPENAI_API_KEY=your-api-key-here
-AZURE_OPENAI_DEPLOYMENT=gpt-4-vision
+AZURE_OPENAI_DEPLOYMENT=gpt-5-chat
 ```
 
 ## Usage
@@ -104,7 +104,7 @@ analyzer = ManufacturingPartAnalyzer(
 # Analyze a single PDF
 result = analyzer.analyze_part(
     pdf_path="drawings/part_drawing.pdf",
-    deployment_name="gpt-4-vision"
+    deployment_name="gpt-5-chat"
 )
 
 # Print results
@@ -170,9 +170,9 @@ print(f"Analyzed {len(results)} drawings")
 - Create "Azure OpenAI" resource
 - Note the endpoint and keys
 
-### 2. Deploy GPT-4 Vision Model
+### 2. Deploy GPT-5 Model
 - In Azure AI Studio, go to Deployments
-- Deploy `gpt-4` or `gpt-4-vision-preview`
+- Deploy `gpt-5-chat` model
 - Note the deployment name
 
 ### 3. Get Credentials
@@ -258,7 +258,7 @@ For best results:
 ## Performance Considerations
 
 - **Processing Time**: ~5-15 seconds per page depending on complexity
-- **Cost**: Each analysis uses GPT-4 Vision tokens (image + text)
+- **Cost**: Each analysis uses GPT-5 tokens (image + text)
 - **Batch Processing**: Use delays between requests to avoid rate limits
 
 ## API Rate Limits
@@ -292,7 +292,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Built with Azure OpenAI GPT-4 Vision
+- Built with Azure OpenAI GPT-5
 - Uses PyMuPDF for PDF processing
 - Inspired by the need to automate manufacturing process planning
 
