@@ -1,6 +1,6 @@
 """
 Manufacturing Part Analyzer
-Uses Azure OpenAI (GPT-4 Vision) to analyze technical drawings and predict manufacturing characteristics
+Uses Azure OpenAI (GPT-5) to analyze technical drawings and predict manufacturing characteristics
 """
 
 import os
@@ -22,7 +22,7 @@ class ManufacturingPartAnalyzer:
     def __init__(self, azure_endpoint: str, api_key: str, api_version: str = "2024-12-01-preview"):
         """
         Initialize the analyzer with Azure OpenAI credentials
-
+        
         Args:
             azure_endpoint: Azure OpenAI endpoint URL
             api_key: Azure OpenAI API key
@@ -183,7 +183,7 @@ Return ONLY a valid JSON object with all fields. Do not include any other text."
     def analyze_part(self, pdf_path: str, deployment_name: str = "gpt-5-chat") -> Dict:
         """
         Analyze a technical drawing PDF and predict manufacturing characteristics
-
+        
         Args:
             pdf_path: Path to PDF file
             deployment_name: Azure OpenAI deployment name (defaults to gpt-5-chat)
@@ -299,7 +299,7 @@ def main():
     AZURE_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
     API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
     DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-5-chat")
-
+    
     if not AZURE_ENDPOINT or not API_KEY:
         print("ERROR: Please set AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY environment variables")
         print("\nExample:")
