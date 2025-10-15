@@ -38,7 +38,7 @@ If you don't have an Azure account:
    - Click "Review + Create"
    - Click "Create" and wait for deployment (2-5 minutes)
 
-### Step 3: Deploy GPT-4 Vision Model
+### Step 3: Deploy GPT-5 Model
 
 1. **Open Azure AI Studio**
    - Go to [Azure AI Studio](https://oai.azure.com/)
@@ -48,8 +48,8 @@ If you don't have an Azure account:
 2. **Create Deployment**
    - Click "Deployments" in the left menu
    - Click "Create new deployment"
-   - Select model: `gpt-4` or `gpt-4-vision-preview`
-   - Give it a deployment name (e.g., `gpt-4-vision`)
+   - Select model: `gpt-5-chat`
+   - Give it a deployment name (e.g., `gpt-5-chat`)
    - Click "Create"
 
 3. **Note Your Deployment Name**
@@ -157,7 +157,7 @@ AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
 AZURE_OPENAI_API_KEY=your-actual-api-key-here
 
 # Your Deployment Name (from Azure AI Studio)
-AZURE_OPENAI_DEPLOYMENT=gpt-4-vision
+AZURE_OPENAI_DEPLOYMENT=gpt-5-chat
 
 # API Version (use latest stable)
 AZURE_OPENAI_API_VERSION=2024-12-01-preview
@@ -371,7 +371,3 @@ Once setup is complete:
 3. **Use separate keys** - Different keys for dev/prod
 4. **Monitor usage** - Check Azure Portal for unexpected activity
 5. **Set spending limits** - Configure cost alerts in Azure
-
----
-
-Need more help? Open an issue on GitHub or consult the [main README](README.md).
